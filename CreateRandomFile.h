@@ -1,0 +1,10 @@
+//
+// Created by Tom Wang on 16/7/16.
+//
+
+#ifndef EXTERNALSORTING_CREATERANDOMFILE_H
+#define EXTERNALSORTING_CREATERANDOMFILE_H
+
+void CreateRandomNumber();
+
+#endif //EXTERNALSORTING_CREATERANDOMFILE_H
