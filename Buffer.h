@@ -8,11 +8,14 @@
 
 class Buffer{
 private:
-    int buffer[M];
-    int count;
+    int buffer[M+20];
+    int size;
 public:
-    SortBlock();
-
+    int SortBlock();
+    int WriteBuffer(int* WriteData,int size);
+    bool IsFull();
+    Buffer();
+    ~Buffer();
 };
 
 #endif //EXTERNALSORTING_BUFFER_H
