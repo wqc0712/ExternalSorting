@@ -30,7 +30,7 @@ private:
     size_t FileCount;
 public:
     size_t ReadFirstFile(Buffer* buffer, size_t* Size);
-    size_t WriteFile(Buffer buffer,size_t Size);
+    size_t WriteFile(Buffer* buffer,size_t Size);
     size_t SeekFirstFile(size_t Position);
 
 };

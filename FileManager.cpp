@@ -33,3 +33,7 @@ size_t FileManager::ReadFirstFile(Buffer *buffer, size_t *Size) {
 size_t FileManager::SeekFirstFile(size_t Position) {
 
 }
+
+size_t FileManage::WriteFile(Buffer* buffer,size_t size) {
+
+}
