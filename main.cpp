@@ -7,13 +7,17 @@
 #include <set>
 #include <map>
 #include "CreateRandomFile.h"
+#include "Buffer.h"
+#include "FileManager.h"
 
 using namespace std;
 
-int main(int argc, char* argv) {
-    if (argc < 2) {
-        CreateRandomNumber();
-    } else {
-        SortFile();
+int main(int argc, char** argv) {
+    Buffer buffer;
+    FileManager file("TestFile");
+    for (int i = 0;i < M;i++) {
+        int T = rand()%100000;
+        buffer.WriteBuffer(&T,1);
     }
+
 }

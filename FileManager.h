@@ -25,14 +25,22 @@ struct IO_stat{
 
 class FileManager{
 private:
-    queue<File*> Pointer;
-    queue<size_t> FileSize;
-    size_t FileCount;
+    FILE* Pointer;
+    size_t FileSize;
+    size_t PointerPosition;
+    string FileName;
+    bool CreateFile();
+    bool CloseFile();
+    bool DestroyFile();
+    bool Writable;
 public:
-    size_t ReadFirstFile(Buffer* buffer, size_t* Size);
-    size_t WriteFile(Buffer* buffer,size_t Size);
-    size_t SeekFirstFile(size_t Position);
-
+    FileManager();
+    FileManager(string Name);
+    ~FileManager();
+    size_t ReadFromFile(Buffer* buffer, size_t* Size);
+    size_t WriteToFile(Buffer* buffer,size_t Size);
+    size_t SeekFile(size_t Position);
+    bool FinishWrite();
 };
 
 IO_stat statistic;

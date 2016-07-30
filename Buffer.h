@@ -12,8 +12,10 @@ private:
     int size;
 public:
     int SortBlock();
-    int WriteBuffer(int* WriteData,int size);
+    int WriteBuffer(int* WriteData,int Wsize);
     bool IsFull();
+    int ReadBuffer(int* ReadData, int Wsize, int StartPoint);
+    int ReadElement(int Point);
     Buffer();
     ~Buffer();
 };
